@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <div
+      class="container d-flex justify-content-center align-items-center min-vh-100"
+    >
+      <div>
+
+        <form action="/resetPassword" method="post">
+          <% if (message) { %>
+          <div class="alert alert-danger mt-3"><%= message %></div>
+          <% } %>
+          <div class="form-group">
+            <label for="Email">Registered Email:</label>
+            <input 
+              type="email" 
+              class="form-control" 
+              name="email" 
+              id="email" 
+              placeholder="Email"
+              required />
+          </div>
+          <div class="form-group">
+            <label for="password">New Password:</label>
+            <input
+              minlength="8"
+              maxlength="20"
+              type="password"
+              class="form-control"
+              name="password"
+              id="password"
+              placeholder="Password"
+              required
+            />
+          </div>
+          <div class="d-flex justify-content-between mb-4">
+          <button type="submit" class="btn btn-primary">Reset</button>
+          </div>
+        </form>
+
+      <div class="d-flex justify-content-between mb-4">
+        <form action="/questions" method="GET">
+          <button type="submit" class="btn btn-warning">Cancel</button>
+        </form>
+      </div>
+
+      </div>
+    </div>
+  </body>
+</html>
