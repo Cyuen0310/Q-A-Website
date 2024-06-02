@@ -130,6 +130,3 @@ dist
 .pnp.*
 
 
-
-# hidden folders
-server/db.js
